@@ -32,4 +32,9 @@ public class Pause : MonoBehaviour
         SceneManager.LoadScene("Start");
     }
 
+    public void Reload()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
+
 }
