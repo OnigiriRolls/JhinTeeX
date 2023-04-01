@@ -6,11 +6,14 @@ public class Movement : MonoBehaviour
 {
     Rigidbody2D rb;
     public float speed = 10f;
+    public ParticleSystem ps;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        ps.Emit(1);
+        ps.Play();
     }
 
     // Update is called once per frame
