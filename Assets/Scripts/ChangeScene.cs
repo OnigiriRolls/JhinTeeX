@@ -8,9 +8,10 @@ public class ChangeScene : MonoBehaviour
     public Animator transitionAnim;
     public string sceneName;
     public RectTransform panel;
+    public RectTransform howToPanel;
+    public RectTransform startPanel;
     public void OnClick()
     {
-        Debug.Log("hello");
         StartCoroutine(LoadScene());
     }
 
@@ -19,9 +20,12 @@ public class ChangeScene : MonoBehaviour
         panel.gameObject.SetActive(true);
         transitionAnim.SetTrigger("end");
         yield return new WaitForSeconds(0.9f);
-        SceneManager.LoadScene(sceneName);
-        
-        
+        SceneManager.LoadScene(sceneName);       
     }
 
+    public void OnHowTo()
+    {
+        howToPanel.gameObject.SetActive(true);
+        startPanel.gameObject.SetActive(false);
+    }
 }
