@@ -18,8 +18,10 @@ public class ChangeScene : MonoBehaviour
     {
         panel.gameObject.SetActive(true);
         transitionAnim.SetTrigger("end");
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.9f);
         SceneManager.LoadScene(sceneName);
+        
+        
     }
 
 }
